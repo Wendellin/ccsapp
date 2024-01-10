@@ -1,3 +1,12 @@
 #!/bin/bash
-amazon-linux-extras install nginx1=stable
-sed -i "s|/usr/share/nginx/html|/var/www|g" /etc/nginx/nginx.conf
+
+cd /home/ec2-user
+
+sudo yum update
+
+# Install php
+sudo amazon-linux-extras install -y php7.2
+
+curl -sS https://getcomposer.org/installer | php
+
+mv composer.phar /usr/local/bin/composer
