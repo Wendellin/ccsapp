@@ -3,6 +3,12 @@ os: linux
 files:
 - source: /webpage/resource/html
   destination: /var/www
+  files:
+- source: /webpage/public/backend/asset/images
+  destination: /var/www
+  files:
+- source: /webpage/public/backend/asset/images/login
+  destination: /var/www
 - source: /scripts/requirements.txt
   destination: /home/ec2-user/scripts
 hooks:
